@@ -15,7 +15,6 @@ const authMiddleWare = jwt({
     issuer: process.env.AUTH_ISSUER,
     algorithms: ["RS256"],
   });
-  const checkScopes = (permissions) => jwtScope(permissions, { scopeKey: "permissions", requireAll: true });
   
 
 const adminRouter:Router = Router();
