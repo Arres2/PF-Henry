@@ -1,0 +1,301 @@
+[
+    {
+        "id": 1,
+        "country": "Argentina",
+        "summary": "Argentina es un país sudamericano de gran envergadura con un terreno que incluye las montañas de los Andes, lagos glaciales y praderas en las Pampas, la tierra tradicional de pastoreo de su famoso ganado. El país es conocido por el baile y la música del tango. Su gran capital cosmopolita, Buenos Aires, se centra en la Plaza de Mayo, rodeada por imponentes edificios del siglo XIX, como la Casa Rosada, el icónico palacio presidencial.",
+        "images": [
+            {
+                "name": "https://images.pexels.com/photos/13558679/pexels-photo-13558679.jpeg?auto=compress&cs=tinysrgb&w=400"
+            },
+            {
+                "name": "https://images.pexels.com/photos/8242975/pexels-photo-8242975.jpeg?auto=compress&cs=tinysrgb&w=400"
+            },
+            {
+                "name": "https://images.pexels.com/photos/1060803/pexels-photo-1060803.jpeg?auto=compress&cs=tinysrgb&w=400"}
+        ],
+        "cities":[
+            {
+                "cid": "c1",
+                "city": "Buenos Aires",
+                "summary": "Buenos Aires es la gran capital cosmopolita de Argentina. Su centro es la Plaza de Mayo, rodeada de imponentes edificios del siglo XIX, incluida la Casa Rosada, el icónico palacio presidencial que tiene varios balcones. Entre otras atracciones importantes, se incluyen el Teatro Colón, un lujoso teatro de ópera de 1908 con cerca de 2,500 asientos, y el moderno museo MALBA, que exhibe arte latinoamericano.",
+                "hotels":[
+                    {
+                        "hid": "h1-b1",
+                        "name": "Hotel Chiavari",
+                        "lat": "-36.69304415952761",
+                        "lng": "-56.67781223068298",
+                        "address": "Hotel Chiavari, Chiozza 2260",
+                        "phoneNumber": "+542257460276",
+                        "stars": 3.5,
+                        "images": "https://hotelchiavari.com.ar/images/galeria/01.jpg"
+                    },
+                    {
+                        "hid": "h2-b1",
+                        "name": "Hotel Hilton",
+                        "lat": "-34.6054652453172",
+                        "lng": "-58.36356027176794",
+                        "address": "Hotel Hilton Buenos Aires, Macacha Güemes 351",
+                        "phoneNumber": "+541148910000",
+                        "stars": 4.7,
+                        "images": "https://www.hilton.com/im/en/BUEHIHH/9576099/hilton-buenos-aires-external-view.jpg?impolicy=crop&cw=5185&ch=3840&gravity=NorthWest&xposition=287&yposition=0&rw=577&rh=427"
+                    }
+                    ],
+                "excursions": "Senderismo, Paseo en bicicleta"
+            },
+            {
+                "cid": "c2",
+            "city": "Mar del Plata",
+            "summary": "Mar del Plata es una ciudad balnearia argentina en la costa del Atlántico. Su larga franja de playas incluye la amplia Punta Mogotes y Playa Grande, con sus rompientes para el surf. Detrás de Playa Grande, las calles rodeadas de árboles del barrio Los Troncos tienen elegantes casas de comienzos del siglo XX, que ahora son museos. Entre ellas se incluye el Museo de Historia Roberto T. Barili que documenta el pasado de la ciudad con fotografías y objetos.",
+            "hotels":[
+                {
+                    "hid": "h1-m1",
+                    "name": "Hotel Chiavari",
+                    "lat": "-36.69304415952761",
+                    "lng": "-56.67781223068298",
+                    "address": "Hotel Chiavari, Chiozza 2260",
+                    "phoneNumber": "+542257460276",
+                    "stars": 2.8,
+                    "images": "https://hotelchiavari.com.ar/images/galeria/31.jpg"
+                },
+                {
+                    "hid": "h2-m1",
+                    "name": "Hotel Hilton",
+                    "lat": "-34.6054652453172",
+                    "lng": "-58.36356027176794",
+                    "address": "Hotel Hilton Buenos Aires, Macacha Güemes 351",
+                    "phoneNumber": "+541148910000",
+                    "stars": 4.3,
+                    "images": "https://www.hilton.com/im/en/BUEHIHH/14909628/hilton-buenos-aires-rooftop.jpg?impolicy=crop&cw=3784&ch=2802&gravity=NorthWest&xposition=0&yposition=98&rw=577&rh=427"
+                }
+                ],
+            "excursions": {
+                "p1": "Paseo a caballo",
+                "place": "Laguna de los padres",
+                "distance": "18.78 km"
+            }
+             }
+        ]
+    },
+    {
+    "id": 2,
+    "country": "Chile",
+    "summary": "Chile es un país largo y angosto que se extiende por el borde occidental de Sudamérica, con más de 6,000 km de costa en el océano Pacífico. Santiago, su capital, se ubica en un valle rodeado de los Andes y la cordillera de la Costa. En la Plaza de Armas de la ciudad, bordeada de palmeras, se encuentra la catedral neoclásica y el Museo de Historia Nacional. El enorme Parque Metropolitano cuenta con piscinas, un jardín botánico y un zoológico.",
+    "images": [
+        {
+            "name": "https://images.pexels.com/photos/2017747/pexels-photo-2017747.jpeg?auto=compress&cs=tinysrgb&w=400"
+        },
+        {
+            "name": "https://images.pexels.com/photos/258101/pexels-photo-258101.jpeg?auto=compress&cs=tinysrgb&w=400"
+        },
+        {
+            "name": "https://images.pexels.com/photos/2469616/pexels-photo-2469616.jpeg?auto=compress&cs=tinysrgb&w=400"}
+    ],
+    "cities":[
+        {
+            "cid": "ch1",
+            "city": "Santiago de chile",
+            "summary": "Santiago, la capital y la ciudad más grande de Chile, se ubica en un valle rodeado de cimas nevadas de los Andes y la Cordillera de la Costa chilena. La Plaza de Armas, el gran núcleo del centro colonial antiguo de la ciudad, tiene 2 monumentos neoclásicos: el Palacio de la Real Audiencia de 1808, donde está el Museo Histórico Nacional, y la Catedral Metropolitana del siglo XVIII. La Chascona es la casa transformada en museo del poeta Pablo Neruda.",
+            "hotels":[
+                {
+                    "hid": "h1-s1",
+                    "name": "Diego de Almagro Providencia Express",
+                    "lat": "-33.425330217812515",
+                    "lng": "-70.62363088319911",
+                    "address": "Almte. Pastene 120, Providencia, 7500509, Región Metropolitana",
+                    "phoneNumber": "+56442353100",
+                    "stars": 3.5,
+                    "images": "https://hotelchiavari.com.ar/images/galeria/25.jpg"
+                },
+                {
+                    "hid": "h2-s1",
+                    "name": "Capital Hotel Bellet",
+                    "lat": "-33.425043678658504",
+                    "lng": "-70.62182843885645",
+                    "address": "Antonio Bellet 135, Providencia, Región Metropolitana",
+                    "phoneNumber": "+56232380900",
+                    "stars": 4.3,
+                    "images": "https://www.hilton.com/im/en/BUEHIHH/14909628/hilton-buenos-aires-rooftop.jpg?impolicy=crop&cw=3784&ch=2802&gravity=NorthWest&xposition=0&yposition=98&rw=577&rh=427"
+                }
+                ],
+            "excursions": "excursion con picnic"
+        },
+        {
+            "cid": "c2",
+        "city": "Viña del mar",
+        "summary": "Viña del Mar es una ciudad turística costera al noroeste de Santiago de Chile. Es conocida por sus jardines, playas y altos edificios. En el Parque Quinta Vergara se encuentra el Anfiteatro Quinta Vergara, el Palacio Vergara de comienzos del siglo XX y el Museo Artequin, que exhibe copias de importantes obras de arte. El Museo de Arqueología e Historia Francisco Fonck cuenta con esculturas moái de piedra de la Isla de Pascua y cabezas reducidas.",
+        "hotels":[
+            {
+                "hid": "h1-m1",
+                "name": "Sheraton Miramar Hotel & Convention Center",
+                "lat": "-33.02093916881764",
+                "lng": "-71.56805683162355",
+                "address": "Av. La Marina 15, Viña del Mar, Valparaíso",
+                "phoneNumber": "+56322388600",
+                "stars": 4.6,
+                "images": "https://hotelchiavari.com.ar/images/galeria/31.jpg"
+            },
+            {
+                "hid": "h2-m1",
+                "name": "Hotel Balia Casino",
+                "lat": "-33.02107410607871",
+                "lng": "-71.56061101983283",
+                "address": "Von Schroeder 36, Viña del Mar, Valparaíso, Chile",
+                "phoneNumber": "+541148910000",
+                "stars": 4.1,
+                "images": "https://www.hilton.com/im/en/BUEHIHH/9576099/hilton-buenos-aires-external-view.jpg?impolicy=crop&cw=5185&ch=3840&gravity=NorthWest&xposition=287&yposition=0&rw=577&rh=427"
+            }
+            ],
+        "excursions": {
+            "p1": "Paseo junto a la playa",
+            "place": "Playa Renaca",
+            "distance": "18.78 km"
+        }
+         }
+    ]},
+    {
+        "id": 3,
+        "country": "Colombia",
+        "summary": "Colombia es un país del extremo norte de Sudamérica. Su paisaje cuenta con bosques tropicales, las montañas de los Andes y varias plantaciones de café. En Bogotá, su capital a gran altura, el distrito Zona Rosa es famoso por sus restaurantes y tiendas. Cartagena, en la costa del Caribe, tiene una Ciudad Antigua colonial amurallada, un castillo del siglo XVI y arrecifes de coral cercanos.",
+        "images": [
+            {
+                "name": "https://images.pexels.com/photos/1559699/pexels-photo-1559699.jpeg?auto=compress&cs=tinysrgb&w=400"
+            },
+            {
+                "name": "https://images.pexels.com/photos/8264573/pexels-photo-8264573.jpeg?auto=compress&cs=tinysrgb&w=400"
+            },
+            {
+                "name": "https://images.pexels.com/photos/7613848/pexels-photo-7613848.jpeg?auto=compress&cs=tinysrgb&w=400"}
+        ],
+        "cities":[
+            {
+                "cid": "c1",
+                "city": "Bogota",
+                "summary": "Bogotá es la extensa capital en altura de Colombia. La Candelaria, su centro con adoquines, cuenta con sitios coloniales como el Teatro Colón neoclásico y la Iglesia de San Francisco del siglo XVII. También alberga museos populares, incluido el Museo Botero, que exhibe arte de Fernando Botero, y el Museo del Oro, con piezas de oro precolombinas. ",
+                "hotels":[
+                    {
+                        "hid": "h1-b1",
+                        "name": "Hotel Chiavari",
+                        "lat": "-36.69304415952761",
+                        "lng": "-56.67781223068298",
+                        "address": "Hotel Chiavari, Chiozza 2260",
+                        "phoneNumber": "+542257460276",
+                        "stars": 3.5,
+                        "images": "https://hotelchiavari.com.ar/images/galeria/25.jpg"
+                    },
+                    {
+                        "hid": "h2-b1",
+                        "name": "Hotel Hilton",
+                        "lat": "-34.6054652453172",
+                        "lng": "-58.36356027176794",
+                        "address": "Hotel Hilton Buenos Aires, Macacha Güemes 351",
+                        "phoneNumber": "+541148910000",
+                        "stars": 4.7,
+                        "images": "https://www.hilton.com/im/en/BUEHIHH/14909628/hilton-buenos-aires-rooftop.jpg?impolicy=crop&cw=3784&ch=2802&gravity=NorthWest&xposition=0&yposition=98&rw=577&rh=427"
+                    }
+                    ],
+                "excursions": "Senderismo, Paseo en bicicleta"
+            },
+            {
+                "cid": "c2",
+            "city": "Medellin",
+            "summary": "Medellín es la capital de la provincia montañosa de Antioquia en Colombia. Es apodada la 'Ciudad de la eterna primavera' por su clima templado y alberga la famosa Feria de las Flores anual. El moderno Metrocable conecta la ciudad con los barrios circundantes y tiene vistas del Valle de Aburrá que se encuentra debajo. Las esculturas de Fernando Botero decoran la Plaza Botero en el centro de la ciudad, mientras que el Museo de Antioquia exhibe más obras del artista colombiano.",
+            "hotels":[
+                {
+                    "hid": "h1-m1",
+                    "name": "Hotel Chiavari",
+                    "lat": "-36.69304415952761",
+                    "lng": "-56.67781223068298",
+                    "address": "Hotel Chiavari, Chiozza 2260",
+                    "phoneNumber": "+542257460276",
+                    "stars": 2.8,
+                    "images": "https://hotelchiavari.com.ar/images/galeria/31.jpg"
+                },
+                {
+                    "hid": "h2-m1",
+                    "name": "Hotel Hilton",
+                    "lat": "-34.6054652453172",
+                    "lng": "-58.36356027176794",
+                    "address": "Hotel Hilton Buenos Aires, Macacha Güemes 351",
+                    "phoneNumber": "+541148910000",
+                    "stars": 4.3,
+                    "images": "https://www.hilton.com/im/en/BUEHIHH/9576099/hilton-buenos-aires-external-view.jpg?impolicy=crop&cw=5185&ch=3840&gravity=NorthWest&xposition=287&yposition=0&rw=577&rh=427"
+                }
+                ],
+            "excursions": "Senderismo, Pase a caballo"
+             }
+        ]
+    },
+    {
+        "id": 4,
+        "country": "Mexico",
+        "summary": "México es un país entre los Estados Unidos y América Central, conocido por las playas en el Pacífico y el golfo de México, y su diverso paisaje de montañas, desiertos y selvas. Las ruinas antiguas, como Teotihuacán y la ciudad maya de Chichén Itzá, se distribuyen por el país, al igual que las ciudades de la época colonial española. En la capital Ciudad de México, las elegantes tiendas, los famosos museos y los restaurantes gourmet son parte de la vida moderna.",
+        "images": [
+            {
+                "name": "https://images.pexels.com/photos/604661/pexels-photo-604661.jpeg?auto=compress&cs=tinysrgb&w=400"
+            },
+            {
+                "name": "https://images.pexels.com/photos/12302722/pexels-photo-12302722.jpeg?auto=compress&cs=tinysrgb&w=400"
+            },
+            {
+                "name": "https://images.pexels.com/photos/12334001/pexels-photo-12334001.jpeg?auto=compress&cs=tinysrgb&w=400"}
+        ],
+        "cities":[
+            {
+                "cid": "c1",
+                "city": "Ciudad de Mexico",
+                "summary": "Ciudad de México es la densamente poblada capital de México que se encuentra a gran altura. Es famosa por su Templo Mayor (un templo azteca del siglo XIII), la Catedral Metropolitana de México, de estilo barroco, de los conquistadores españoles y el Palacio Nacional, que alberga murales históricos de Diego Rivera. Todos estos hitos se ubican en torno a la Plaza de la Constitución, la enorme plaza principal conocida también como el Zócalo.",
+                "hotels":[
+                    {
+                        "hid": "h1-b1",
+                        "name": "Hotel Chiavari",
+                        "lat": "-36.69304415952761",
+                        "lng": "-56.67781223068298",
+                        "address": "Hotel Chiavari, Chiozza 2260",
+                        "phoneNumber": "+542257460276",
+                        "stars": 3.5,
+                        "images": "https://www.hilton.com/im/en/BUEHIHH/9576171/hilton-buenos-aires-rooftop-at-night.jpg?impolicy=crop&cw=5185&ch=3840&gravity=NorthWest&xposition=287&yposition=0&rw=577&rh=427"
+                    },
+                    {
+                        "hid": "h2-b1",
+                        "name": "Hotel Hilton",
+                        "lat": "-34.6054652453172",
+                        "lng": "-58.36356027176794",
+                        "address": "Hotel Hilton Buenos Aires, Macacha Güemes 351",
+                        "phoneNumber": "+541148910000",
+                        "stars": 4.7,
+                        "images": "https://hotelchiavari.com.ar/images/galeria/15.jpg"
+                    }
+                    ],
+                "excursions": "Recorrido turistico, Paseo en bicicleta"
+            },
+            {
+                "cid": "c2",
+            "city": "Cuernavaca",
+            "summary": "Cuernavaca es la frondosa capital del estado de Morelos en México, rodeada de las montañas del Tepozteco, al sur de Ciudad de México. En el centro colonial de la ciudad está el Palacio de Cortés del siglo XVI, antiguo hogar del conquistador español Hernán de Cortés y actualmente un museo de historia con murales del artista mexicano Diego Rivera. Al suroeste, está la Catedral de Cuernavaca, en un monasterio amurallado del siglo XVI con un mural que ilustra al primer santo de México.",
+            "hotels":[
+                {
+                    "hid": "h1-m1",
+                    "name": "Hotel Chiavari",
+                    "lat": "-36.69304415952761",
+                    "lng": "-56.67781223068298",
+                    "address": "Hotel Chiavari, Chiozza 2260",
+                    "phoneNumber": "+542257460276",
+                    "stars": 2.8,
+                    "images": "https://www.hilton.com/im/en/BUEHIHH/4591558/executive-corner-suite.jpg?impolicy=crop&cw=2025&ch=1500&gravity=NorthWest&xposition=111&yposition=0&rw=577&rh=427"
+                },
+                {
+                    "hid": "h2-m1",
+                    "name": "Hotel Hilton",
+                    "lat": "-34.6054652453172",
+                    "lng": "-58.36356027176794",
+                    "address": "Hotel Hilton Buenos Aires, Macacha Güemes 351",
+                    "phoneNumber": "+541148910000",
+                    "stars": 4.3,
+                    "images": "https://www.hilton.com/im/en/BUEHIHH/4582370/0000535346.tif?impolicy=crop&cw=3845&ch=2848&gravity=NorthWest&xposition=221&yposition=0&rw=577&rh=427"
+                }
+                ],
+            "excursions": "Senderismo, Pase a caballo"
+             }
+        ]
+    }
+]

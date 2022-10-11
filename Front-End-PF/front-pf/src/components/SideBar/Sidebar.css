@@ -1,0 +1,27 @@
+.container-iconos {
+  position: fixed;
+  top: 50%;
+  transform: translate(0, -51%);
+  padding-bottom: 50px;
+}
+.ul-iconos {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 0px;
+}
+.li-iconos {
+  margin-top: 150px;
+}
+.iconoDeLi {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  background-color: rgb(141, 169, 221);
+  border-radius: 100px;
+  box-shadow: 2px 1px 9px 0px black;
+  margin-left: 10px;
+}

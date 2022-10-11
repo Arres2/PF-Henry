@@ -1,0 +1,182 @@
+.mainContainer {
+  border: 1px solid transparent;
+  width: 100%;
+  height: 100vh;
+  background-image: url("../../../public/images/argentina_mountain_lake-Scenery_HD_Wallpaper_1366x768.jpg");
+  background-size: 100% 100%;
+  color: white;
+}
+
+.container {
+  height: 80vh;
+  display: flex;
+  margin: 10px;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.packContainer {
+  margin: 10px;
+  height: 70vh;
+  width: 25%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.formContainer {
+  margin: 10px;
+  border: 1px solid white;
+  border-radius: 20px;
+  height: 70vh;
+  width: 25%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #0b132bff;
+}
+
+.pack {
+  border: 1px solid white;
+  width: 320px;
+  height: 620px;
+  border-radius: 25px;
+  background-color: #0b132bff;
+}
+
+.hotel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #3a506bff;
+  border-radius: 15px;
+  margin: 10px;
+  margin-top: 70px;
+}
+
+.hotel p {
+  margin-left: 10px;
+  font-size: 20px;
+  margin-top: 8px;
+}
+
+.acts {
+  display: flex;
+  border-radius: 20px;
+  background-color: #1c2541ff;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px;
+  height: 17vh;
+}
+
+.acts p {
+  font-size: 20px;
+  border-radius: 20px;
+  background-color: #3a506bff;
+  padding: 3px 10px 3px 10px;
+  margin-top: 5px;
+}
+
+.actividades {
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+}
+
+.select {
+  border-radius: 10px;
+  margin: 20px 10px 20px 10px;
+  background-color: #1c2541ff;
+  padding: 10px 0px 10px 0px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.select label {
+  margin-right: 20px;
+  font-size: 17px;
+}
+
+.select select {
+  font-size: 17px;
+  text-decoration: none;
+  border-radius: 5px;
+  outline: none;
+  background-color: #3a506bff;
+}
+
+.select select:hover {
+  cursor: pointer;
+}
+
+.paisDestino {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.paisDestino h1 {
+  background-color: #3a506bff;
+  font-size: 30px;
+  border-radius: 15px;
+  padding: 0px 40px 5px 40px; 
+  position: absolute;
+  top: 140px;
+}
+
+.paisDestino h2 {
+  font-size: 20px;
+  position: absolute;
+  border-radius: 12px;
+  background-color: #3a506bff;
+  top: 187px;
+  padding: 5px 20px 5px 20px; 
+}
+
+
+.tiempo {
+  display: flex;
+  justify-content: center;
+}
+
+.tiempo p {
+  border-radius: 5px;
+  margin-bottom: 10px;
+  font-size: 20px;
+  margin-left: 10px;
+}
+
+.tiempo h5 {
+  margin-top: 3px;
+}
+
+.checkTxt h2 {
+  font-size: 19px;
+}
+
+.checkTxt {
+  width: 100%;
+  margin-left: 20px;
+}
+
+.check {
+  height: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.checkbox input {
+  margin-right: 4px;
+}
+
+.checkbox input:hover {
+  cursor: pointer;
+}
+
+.precio h3 {
+  font-size: 23px;
+  text-align: center;
+  margin-top: 6px;
+}

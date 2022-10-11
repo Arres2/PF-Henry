@@ -1,0 +1,26 @@
+.containerAll {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.containerCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px;
+  justify-content: space-between;
+  height: 350px;
+  width: 250px;
+  border-radius: 20px;
+  background-image: url("https://a.travel-assets.com/findyours-php/viewfinder/images/res40/80000/80287-Salta.jpg");
+  color: white;
+}
+.carousel-indicators {
+  width: 0;
+  height: 0;
+}
+
+.carousel-inner {
+  width: 70%;
+}
