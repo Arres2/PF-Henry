@@ -2,7 +2,6 @@ import express from 'express'
 import { indexRouter } from './routes';
 const { expressjwt: jwt } = require("express-jwt");
 const jwks = require("jwks-rsa");
-const jwtScope = require("express-jwt-scope");
 const { statusUpdater } = require("./controllers.js");
 const cookieParser = require("cookie-parser");
 const bodyParser = require("body-parser");
