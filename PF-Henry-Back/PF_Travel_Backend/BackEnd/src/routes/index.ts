@@ -17,22 +17,20 @@ const authMiddleWare = jwt({
       jwksRequestsPerMinute: 5,
       jwksUri: process.env.AUTH_JWKS_URI,
     }),
-    audience: process.env.AUTH_AUDIENCE,
-    issuer: process.env.AUTH_ISSUER,
+    audience: process.env.AUTH0_AUDIENCE,
+    issuer: process.env.AUTH0_ISSUER,
     algorithms: ["RS256"],
   });
 
-indexRouter.use('/', (req, res, next) => {
-    //res.send("estamos en el index")
-    res.send("HOLIWIS")
-    next()
-})
 indexRouter.use('/admin', authMiddleWare, adminRouter)
 indexRouter.use('/user',authMiddleWare ,customerRouter)
 indexRouter.use('/hotel', authMiddleWare,hotelRouter)
 indexRouter.use('/excursion',authMiddleWare ,excursionRouter)
-indexRouter.use('/ticket', authMiddleWare ,ticketRouter)
+indexRouter.use('/ticket' ,ticketRouter)
 indexRouter.use('/package', packageRouter)
-indexRouter.get("/callback")
+indexRouter.get("/login", (req, res)=>{
+  console.log(req)
+  res.send("LOGEADO")
+})
 
 export {indexRouter}

@@ -6,8 +6,8 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 export default function AboutUs() {
   return (
     <>
-        <NavBar/>
-        <div className='flex flex-wrap w-2/6 h-24 m-4'>
+      
+        <div className='flex flex-wrap '>
           <div className='my-4'>
             <h2 className='text-4xl'>TEAM WORK</h2>
           </div>
@@ -15,7 +15,7 @@ export default function AboutUs() {
             <p className='text-2xl'>Conoce al team de desarrolladores full stack.</p>
           </div>
             <div>
-              <div className='w-2/6 h-24 bg-slate-400 m-10 p-2 flex '>
+              <div className='bg-slate-400 m-10 p-2 flex '>
               <img src={AndresC} alt='Andres Cardozo' className='w-20 h-20 m-4 rounded'/>
               <h2 className='text-center'>Andres Cardozo</h2>
               <div className='m-4'>
@@ -24,7 +24,7 @@ export default function AboutUs() {
             </div>
           </div>
         </div>
-      <Footer/>
+
     </>
   )
 }

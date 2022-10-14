@@ -12,17 +12,15 @@ export default function InfoCard() {
   const packById = useSelector((state) => state.packById);
   const { id } = useParams();
 
-
   useEffect(() => {
     dispatch(getPackById(id));
   }, [dispatch]);
 
-
   return (
-    <div>
-      <NavBar />
-      <CardInformation img={packById?.image} name={packById?.name} country={packById?.country}/>
-      <Footer />
-    </div>
+    <CardInformation
+      img={packById?.image}
+      name={packById?.name}
+      country={packById?.country}
+    />
   );
 }

@@ -9,8 +9,8 @@ import Filtros from '../../components/Filtros/Filtros.jsx';
 export default function Hotels() {
 
   return (
-    <div>
-      <NavBar/>
+  
+
       <div className='flex m-4'>
         <Filtros/>
         <div className='w-auto h-auto mx-8 p-4'>
@@ -19,7 +19,7 @@ export default function Hotels() {
           <MapView/>
           </div>
       </div>
-      <Footer/>
-    </div>
+     
+  
   )
 }

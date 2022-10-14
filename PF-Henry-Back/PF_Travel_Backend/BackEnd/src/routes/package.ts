@@ -19,6 +19,18 @@ const authMiddleWare = jwt({
   algorithms: ["RS256"],
 });
 
+var jwtCheck = jwt({
+  secret: jwks.expressJwtSecret({
+      cache: true,
+      rateLimit: true,
+      jwksRequestsPerMinute: 5,
+      jwksUri: 'https://dev-8edm2fvn.us.auth0.com/.well-known/jwks.json'
+}),
+audience: 'https://localhost:5000/admin',
+issuer: 'https://dev-8edm2fvn.us.auth0.com/',
+algorithms: ['RS256']
+});
+
 
 
 

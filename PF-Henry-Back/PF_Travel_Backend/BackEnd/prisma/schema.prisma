@@ -41,7 +41,7 @@ model customer {
   email          String           @unique
   numberCard     String           @unique
   tPackage       touristPackage[]
-  isAdmin        Boolean
+  role           String
 }
 
 model ticket {

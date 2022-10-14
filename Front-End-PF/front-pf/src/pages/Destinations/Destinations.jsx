@@ -51,7 +51,7 @@ export default function Paquetes() {
 
   return (
     <div>
-      <NavBar />
+   
       <div className="mx-24 my-4">
         <div className="w-auto h-127 my-8">
           <div className=" bg-rock-lake w-full h-full bg-no-repeat bg-cover bg-center rounded-2 text-white flex">
@@ -84,7 +84,7 @@ export default function Paquetes() {
       />
       </div> */}
       </div>
-      <Footer />
+ 
     </div>
   );
 }

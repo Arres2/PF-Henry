@@ -2,9 +2,9 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 import s from "./Register.module.css";
 import validate from "./validator";
-import LoginGoogle from "../loginGoogle/loginGoogle";
 
-export default function Login() {
+
+export default function RegisterForm() {
   const [input, setInput] = useState({
     username: "",
     email: "",
@@ -262,10 +262,7 @@ export default function Login() {
                 <div className={s.loginButton}>
                 <button onClick={handleSubmit}>Create Account</button>
                 </div>
-                <div className={s.googleBtn}>
-                  <p id={s.googleOr}>Sign in With Google</p>
-                  <LoginGoogle />
-                </div>
+              
               </form>
               <div className={s.loginSignup}>
                 <span className="text">

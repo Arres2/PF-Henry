@@ -6,18 +6,22 @@ import HelpIcon from "@mui/icons-material/Help";
 import LocalAirportIcon from "@mui/icons-material/LocalAirport";
 import { Link } from "react-router-dom";
 import "./Sidebar.css";
+import { useAuth0 } from "@auth0/auth0-react";
 
 export default function SideBar() {
+
+  const {user,isAuthenticated, loginWithRedirect}=useAuth0()
   return (
     <div className="container-iconos">
       <ul className="ul-iconos">
         <li className="li-iconos">
           <div className="iconoDeLi">
             <Link
-              to="/user"
-              className="hover:text-blue-700  transition ease-in duration-200 text-1-color"
+              to={isAuthenticated? `/user/`: null}
+              onClick={isAuthenticated? null:loginWithRedirect}
+              className={isAuthenticated?`background-image: ${user.picture}`: `hover:text-blue-700  transition ease-in duration-200 text-1-color`}
             >
-              <AccountCircleIcon fontSize="large" />
+              <AccountCircleIcon fontSize="large"  />
             </Link>
           </div>
         </li>

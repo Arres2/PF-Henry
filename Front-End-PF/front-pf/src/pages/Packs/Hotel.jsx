@@ -8,7 +8,7 @@ import Col from "react-bootstrap/Col";
 export default function PageHotel() {
   return (
     <div className="container-all-info-pack">
-      <NavBar />
+      
       <div className="container" id="container-img"></div>
       <div className="container">
         <h1>Los mejores lugar al alcance de un click</h1>
@@ -29,7 +29,7 @@ export default function PageHotel() {
           </Row>
         </Container>
       </div>
-      <Footer />
+   
     </div>
   );
 }
