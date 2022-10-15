@@ -1,6 +1,20 @@
 import { Router} from "express";
 import { PrismaClient } from "@prisma/client";
+const { expressjwt: jwt } = require("express-jwt");
+const jwks = require("jwks-rsa");
 
+
+var authMiddleWare = jwt({
+  secret: jwks.expressJwtSecret({
+      cache: true,
+      rateLimit: true,
+      jwksRequestsPerMinute: 5,
+      jwksUri: 'https://dev-8edm2fvn.us.auth0.com/.well-known/jwks.json'
+}),
+audience: 'http://localhost:5000/user',
+issuer: 'https://dev-8edm2fvn.us.auth0.com/',
+algorithms: ['RS256']
+});
 
 
 
@@ -10,36 +24,17 @@ const prisma:PrismaClient = new PrismaClient()
 const customerRouter:Router = Router();
 
 
-
-
-// customerRouter.use('/CreateCustomer', cors(corsOptions)).post((req,res)=>{
-//     try {
-//       res.status(200).json("El Modulo /CreateCustomer se encuentra en desarrollo")
-//     } catch (e) {
-//       res.status(400).json(e)
-//     }
-//   })
-
-
-  customerRouter.post('/UpdateCustomer', async (req, res) => {
+  customerRouter.get('/', authMiddleWare,async (req, res) => {
     try {
-      res.status(200).json("El Modulo /UpdateUser se encuentra en desarrollo")
-    } catch (e) {
-      res.status(400).json(e)
-    }
-  })
-
-  customerRouter.get('/Customer', async (req, res) => {
-    try {
-      const costumers = await prisma.customer.findMany()
-      res.status(200).json(costumers)
+      console.log(req.body)
+      res.status(200).json('Estas en el modulo Users')
     } catch (e) {
       res.status(400).json(e)    
     }  
   })
-
-  customerRouter.get('/', async (req, res) => {
+  customerRouter.post('/',async (req, res) => {
     try {
+      console.log(req.body)
       res.status(200).json('Estas en el modulo Users')
     } catch (e) {
       res.status(400).json(e)    
