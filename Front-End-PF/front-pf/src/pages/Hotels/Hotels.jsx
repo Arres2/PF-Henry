@@ -1,7 +1,5 @@
 import React from 'react'
-import Footer from '../../components/Footer/Footer';
 import MapView from '../../components/MapView/MapView';
-import NavBar from '../../components/NavBar/NavBar';
 import CardsHotels from '../../components/CardsHotels/CardsHotels';
 import Filtros from '../../components/Filtros/Filtros.jsx';
 

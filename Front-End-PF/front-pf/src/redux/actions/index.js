@@ -45,8 +45,24 @@ export function setUserInfo(getToken, email) {
     try {
       if (email) {
         const token = await getToken();
-        // console.log(token);
-        let response = await services.getUserInformation(token, email);
+        console.log(await token);
+        // var options = {
+        //   method: "POST",
+        //   url: "https://dev-8edm2fvn.us.auth0.com/oauth/token",
+        //   headers: {
+        //     "content-type": "application/json",
+        //     "Access-Control-Allow-Origin": "*",
+        //   },
+        //   body: '{"client_id":"mG9Fv4XAtY0pYzdsmyfIRTfUrIGu0Qlp","client_secret":"MECJimvzOLguoSZkYI7J_GhdolF-KA-YHkQ_cCFDSjuVgDsLKC6VlSe-ouIGLZxE","audience":"https://localhost:5000/admin","grant_type":"client_credentials"}',
+        // };
+
+        // let token = axios.request(options, function (error, response, body) {
+        //   if (error) throw new Error(error);
+        //   console.log(response);
+        //   return response;
+        // });
+
+        let response = await services.getUserInformation(await token, email);
         return dispatch({ type: SET_USER, payload: response.data });
       }
     } catch (error) {
