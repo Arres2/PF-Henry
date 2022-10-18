@@ -10,7 +10,6 @@ import {
   SET_PROFILE_OPTIONS,
   GET_ALL_HOTEL,
   GET_PACK_BY_ID,
-  SAVE_USER,
   SET_USER,
 } from "./actionsTypes";
 
@@ -22,64 +21,35 @@ const axios = require("axios");
 
 // ------------------------USER ACTIONS ------------------------
 
-export function saveUser(email, picture) {
+export function setUserInfo(getToken, email, picture, name, isVerified) {
   return async (dispatch) => {
     try {
-      const response = await services.addUser(email, picture);
-      return dispatch({
-        type: SAVE_USER,
-        payload: [
-          response.data.msg,
-          response.data.data,
-          response.data.complited,
-        ],
-      });
-    } catch (e) {
-      console.log(e);
-    }
-  };
-}
+      const token = await getToken();
+      console.log(await token);
 
-export function setUserInfo(getToken, email) {
-  return async (dispatch) => {
-    try {
-      if (email) {
-        const token = await getToken();
-        console.log(await token);
-        // var options = {
-        //   method: "POST",
-        //   url: "https://dev-8edm2fvn.us.auth0.com/oauth/token",
-        //   headers: {
-        //     "content-type": "application/json",
-        //     "Access-Control-Allow-Origin": "*",
-        //   },
-        //   body: '{"client_id":"mG9Fv4XAtY0pYzdsmyfIRTfUrIGu0Qlp","client_secret":"MECJimvzOLguoSZkYI7J_GhdolF-KA-YHkQ_cCFDSjuVgDsLKC6VlSe-ouIGLZxE","audience":"https://localhost:5000/admin","grant_type":"client_credentials"}',
-        // };
-
-        // let token = axios.request(options, function (error, response, body) {
-        //   if (error) throw new Error(error);
-        //   console.log(response);
-        //   return response;
-        // });
-
-        let response = await services.getUserInformation(await token, email);
-        return dispatch({ type: SET_USER, payload: response.data });
-      }
+      let response = await services.getUserInformation(
+        await token,
+        email,
+        picture,
+        name,
+        isVerified
+      );
+      return dispatch({ type: SET_USER, payload: response });
     } catch (error) {
       console.log(error);
     }
   };
 }
 
-export function patchUser(getToken, payload) {
+export function updateUser(getToken, payload) {
   return async (dispatch) => {
     try {
       const token = await getToken();
-      await services.updateUser(payload, token);
+      let response = await services.patchUser(token, payload);
 
       return dispatch({
         type: PATCH_USER,
-        payload,
+        payload: response,
       });
     } catch (error) {
       console.log(error);

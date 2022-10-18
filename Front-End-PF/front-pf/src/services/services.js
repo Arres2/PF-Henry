@@ -2,13 +2,16 @@ import axios from "axios";
 
 const URL = process.env.REACT_APP_API_SERVER_URL;
 
-export function getUserInformation(token, email) {
+export function getUserInformation(token, email, picture, name, isVerified) {
   const options = {
     method: "GET",
     mode: "cors",
     headers: { authorization: `Bearer ${token}` },
   };
-  return axios(`${URL}user?email=${email}`, options);
+  return axios(
+    `${URL}user?email=${email}&picture=${picture}&name=${name}&isVerified=${isVerified}`,
+    options
+  );
 }
 
 export function getUserReservations(token, userId) {
@@ -38,18 +41,15 @@ export function cancelUserReservation(token, userId, rentId) {
   return axios.delete(`${URL}rent/refund/${userId}/${rentId}`, options);
 }
 
-export function addUser(email, picture) {
-  return axios.post(`${URL}user`, { email, picture });
-}
-
-export function updateUser(user, token) {
+export function patchUser(token, user) {
   // console.log("service token: "+token);
   const options = {
     method: "PATCH",
     mode: "cors",
+    body: { user },
     headers: { authorization: `Bearer ${token}` },
   };
-  return axios.patch(`${URL}user/${user.userId}`, user, options);
+  return axios.patch(`${URL}user/${user.id}`, user, options);
 }
 export function getAllUsersInfo(token, email) {
   const options = {

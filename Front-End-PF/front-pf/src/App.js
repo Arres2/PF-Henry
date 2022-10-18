@@ -17,7 +17,7 @@ import ProtectedRoutes from "./ProtectedRoutes";
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { useAuth0 } from "@auth0/auth0-react";
-import { setUserInfo, saveUser } from "./redux/actions/index";
+import { setUserInfo } from "./redux/actions/index";
 
 function App() {
   const dispatch = useDispatch();
@@ -25,15 +25,17 @@ function App() {
 
   useEffect(() => {
     if (isAuthenticated) {
-      dispatch(setUserInfo(getAccessTokenSilently, user.email));
+      dispatch(
+        setUserInfo(
+          getAccessTokenSilently,
+          user.email,
+          user.picture,
+          user.name,
+          user.email_verified
+        )
+      );
     }
-  }, [dispatch, isAuthenticated, getAccessTokenSilently, user]);
-
-  useEffect(() => {
-    if (isAuthenticated) {
-      dispatch(saveUser(user.email, user.picture));
-    }
-  }, [user, dispatch]);
+  }, [user, dispatch, isAuthenticated, getAccessTokenSilently]);
 
   return (
     <div className="App">
