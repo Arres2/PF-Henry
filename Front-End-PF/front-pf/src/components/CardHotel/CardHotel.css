@@ -1,0 +1,40 @@
+.imagenCardPack {
+  height: 200px;
+  width: 400px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+.pack {
+  width: 3  00px;
+  height: auto;
+  max-height: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px;
+  margin-bottom: 60px;
+  border: 2px solid black;
+  border-radius: 25px;
+  outline: none;
+  text-decoration: none;
+  color: white;
+  background-color: #1c2541ff;
+}
+.pack:hover {
+  background-color: #3a506bff;
+}
+.imgPackCardTotal {
+  height: 200px;
+  width: auto;
+}
+.infoCity {
+  display: flex;
+  justify-content: start;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  margin-left: 10px;
+}
+.valorPack {
+  width: 100%;
+}

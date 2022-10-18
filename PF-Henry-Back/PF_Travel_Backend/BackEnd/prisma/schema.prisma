@@ -1,0 +1,124 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model familyPackage {
+  id        String           @id @default(uuid())
+  billingId String           @default(uuid())
+  package   String           @default(uuid())
+  cost      Decimal          @db.Money
+  tPackage  touristPackage[]
+}
+
+model touristPackage {
+  id         String                       @id @default(uuid())
+  customerId String
+  ticketId   String
+  cost       Decimal                      @db.Money
+  familyPId  String
+  customer   customer                     @relation(fields: [customerId], references: [id])
+  familyP    familyPackage                @relation(fields: [familyPId], references: [id])
+  ticket     ticket                       @relation(fields: [ticketId], references: [id])
+  excursions excursionsOnTouristPackage[]
+}
+
+model customer {
+  id             String           @id @unique @default(uuid())
+  name           String?
+  picture        String?
+  identification String?
+  birthday       String?
+  phoneNumber    String?
+  email          String           @unique
+  isVerified     Boolean          @default(false)
+  role           Role             @default(USER)
+  tPackage       touristPackage[]
+}
+
+model ticket {
+  id        String           @id @default(uuid())
+  fligthId  String?
+  class     String
+  chair     String
+  cost      Decimal          @db.Money
+  companyId String
+  company   company          @relation(fields: [companyId], references: [id])
+  tPackage  touristPackage[]
+}
+
+model accommodation {
+  id          String  @id @default(uuid())
+  hotelId     String
+  location    String
+  description String
+  class       Int
+  cost        Decimal @db.Money
+  services    Int
+}
+
+model excursion {
+  id        String                       @id @default(uuid())
+  name      String?
+  address   String
+  startDate String
+  endDate   String
+  type      String
+  cost      Decimal                      @db.Money
+  tPackages excursionsOnTouristPackage[]
+}
+
+model excursionsOnTouristPackage {
+  excursionId String
+  tPackageId  String
+  excursion   excursion      @relation(fields: [excursionId], references: [id])
+  tPackage    touristPackage @relation(fields: [tPackageId], references: [id])
+
+  @@id([excursionId, tPackageId])
+}
+
+model company {
+  id      String   @id @default(uuid())
+  name    String?
+  contact String
+  ticket  ticket[]
+}
+
+model hotel {
+  id          String @id @default(uuid())
+  name        String
+  phoneNumber String
+  address     String
+  cityCountry String
+  description String
+  email       String
+  image       String
+  services    Int?
+}
+
+model services {
+  id      Int    @id @default(autoincrement())
+  service String
+}
+
+model service {
+  id       Int     @id @default(autoincrement())
+  services Int
+  cost     Decimal @db.Money
+}
+
+model type {
+  id     Int    @id @default(autoincrement())
+  name   String
+  detail String
+}
+
+enum Role {
+  USER
+  ADMIN
+  SUPERADMIN
+}

@@ -1,0 +1,29 @@
+#container-img {
+  display: flex;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+.imgPack {
+  border-radius: 50px;
+}
+
+#containerCardPack {
+  display: flex;
+  flex-direction: column;
+  background-color: #0b132bff;
+  margin-bottom: 50px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 60px;
+  margin-bottom: 40px;
+}
+.bodyPack {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.container-all-info-pack {
+  background-image: url("https://i.pinimg.com/originals/42/75/69/4275694519844b2196e1b53e0a9b755b.jpg");
+  background-size: cover;
+}

@@ -1,0 +1,14 @@
+.info-text {
+  display: flex;
+  flex-direction: row;
+  background-color: #3a506b;
+  justify-content: space-around;
+}
+.info-total {
+  width: 300px;
+  border-radius: 20px;
+}
+.li-form {
+  background-color: rgba(240, 248, 255, 0.833);
+  color: #0b132b;
+}

@@ -1,0 +1,41 @@
+.container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: auto;
+}
+
+.mainContainer {
+  width: 100%;
+  height: auto;
+}
+
+.btn button {
+  height: 8vh;
+  width: 25vw;
+  border-radius: 50px;
+  margin: 10px;
+  background-color: #1c2541ff;
+  color: #6fffe9ff;
+  transition: 0.3s;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  font-size: 18px;
+  overflow: hidden;
+}
+
+.btn button:hover {
+  background-color: #6fffe9ff;
+  color: #1c2541ff;
+  transition: 0.3s;
+}
+
+.imgContainer {
+  margin-top: 10px;
+  height: 10vh;
+  width: 100%;
+}
+
+#img {
+  max-height: 300px;
+  width: 100%;
+}

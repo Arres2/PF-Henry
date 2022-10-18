@@ -1,0 +1,16 @@
+.carousel-indicators {
+  height: 0px;
+  width: 0px;
+}
+.carouse-inner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.carousel {
+  width: 80%;
+}
+.container-all-carousel {
+  display: flex;
+  justify-content: center;
+}
