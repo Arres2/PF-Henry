@@ -7,9 +7,7 @@ import PackCreate from "../../components/PackCreate/PackCreate";
 export default function CreatePack() {
   return (
     <div className={s.container}>
-      <NavBar />
-        <PackCreate />
-      <Footer />
+      <PackCreate />
     </div>
   );
 }

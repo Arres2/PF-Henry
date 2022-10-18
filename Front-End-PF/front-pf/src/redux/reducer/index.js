@@ -1,12 +1,18 @@
 import { ActionTypes } from "@mui/base";
 import {
-  GET_ALL_PACKS,
-  GET_ALL_HOTEL,
   GET_ALL_EXCURSION,
-  GET_CURRENT_USER,
+  GET_ALL_RESERVATIONS,
+  GET_ALL_PACKS,
+  GET_ALL_USERS_INFO,
+  PATCH_USER,
+  DELETE_RESERVATION,
+  DELETE_USER_INFO,
+  GET_USER_FOR_ADMIN,
+  SET_PROFILE_OPTIONS,
+  GET_ALL_HOTEL,
   GET_PACK_BY_ID,
-  USER_LOGIN,
-  USER_LOGOUT,
+  SAVE_USER,
+  SET_USER,
 } from "../actions/actionsTypes";
 
 const initialState = {
@@ -51,28 +57,28 @@ export const rootReducer = (state = initialState, action) => {
         ...state,
         excursiones: action.payload,
       };
-    case GET_CURRENT_USER:
+    case SET_USER:
       console.log(state);
       return {
         ...state,
         currentUser: action.payload,
       };
     case GET_PACK_BY_ID:
-      console.log(action.payload)
+      console.log(action.payload);
       return {
         ...state,
         packById: action.payload,
       };
-    case USER_LOGIN:
-      return {
-        ...state,
-        loginAccess: action.payload,
-      };
-    case USER_LOGOUT:
-      return {
-        ...state,
-        loginAccess: {},
-      };
+    // case USER_LOGIN:
+    //   return {
+    //     ...state,
+    //     loginAccess: action.payload,
+    //   };
+    // case USER_LOGOUT:
+    //   return {
+    //     ...state,
+    //     loginAccess: {},
+    //   };
     default:
       return {
         ...state,

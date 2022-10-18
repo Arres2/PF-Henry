@@ -18,11 +18,9 @@ export default function Excursiones() {
 
   return (
     <div>
-      <NavBar />
       <SideBar />
       <BodyExcursiones />
       <CardExcursion excursionesInfo={excursiones} />
-      <Footer />
     </div>
   );
 }

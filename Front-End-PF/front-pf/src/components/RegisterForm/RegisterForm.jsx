@@ -2,31 +2,35 @@ import { Link } from "react-router-dom";
 import { useState } from "react";
 import s from "./Register.module.css";
 import validate from "./validator";
-import LoginGoogle from "../loginGoogle/loginGoogle";
+import { useDispatch } from "react-redux";
+import { useSelector } from "react-redux";
+import { updateUser } from "../../redux/actions/index";
+import { useAuth0 } from "@auth0/auth0-react";
+import { useNavigate } from "react-router-dom";
 
-export default function Login() {
+export default function RegisterForm() {
+  const dispatch = useDispatch()
+  const currentUser = useSelector((state)=>state.currentUser)
+  const {getAccessTokenSilently}=useAuth0()
+  const redirect = useNavigate(()=>window.location.origin)
+
   const [input, setInput] = useState({
-    username: "",
-    email: "",
-    password: "",
+
     date_of_birth: "",
     phone_number: "",
-    first_name: "",
-    last_name: "",
     city: "",
     zip_code: "",
     address: "",
+    passport:""
   });
 
   const [click, setClick] = useState({
-    username: false,
-    email: false,
-    password: false,
     date_of_birth: false,
-    first_name: false,
-    last_name: false,
+    phone_number: false,
     city: false,
-    phone_number: false
+    zip_code: false,
+    address: false,
+    passport:false
   });
 
   const [error, setError] = useState({});
@@ -56,19 +60,18 @@ export default function Login() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (!Object.keys(error).length && input.username !== "") {
-      // dispatch();
-      console.log("register");
+    if (!Object.keys(error).length) {
+      dispatch(updateUser(getAccessTokenSilently,{...input, id: currentUser.id}));
+      alert("Usuario actualizado exitosamente")
+      redirect()
     } else {
       setClick({
-        username: true,
-        email: true,
-        password: true,
         date_of_birth: true,
-        first_name: true,
-        last_name: true,
+        phone_number: true,
         city: true,
-        phone_number: true
+        zip_code: true,
+        address: true,
+        passport:true
       })
     }
   };
@@ -81,55 +84,6 @@ export default function Login() {
             <div className={s.formLogin}>
               <span className={s.title}>Registration</span>
               <form action="#">
-                <div className={s.inputField}>
-                  <input
-                    type="text"
-                    placeholder="Username"
-                    autoComplete="off"
-                    onChange={handleInputChange}
-                    spellCheck="off"
-                    required
-                    name="username"
-                    value={input.username}
-                    onClick={handleClick}
-                  />
-                  {click.username && error.username && (
-                    <p className={s.error}>{error.username}</p>
-                  )}
-                  <i class="uil uil-user"></i>
-                </div>
-                <div className={s.inputField}>
-                  <input
-                    type="email"
-                    name="email"
-                    placeholder="Email"
-                    autoCapitalize="off"
-                    required
-                    value={input.email}
-                    onClick={handleClick}
-                    onChange={handleInputChange}
-                  />
-                  <i class="uil uil-envelope icon"></i>
-                  {click.email && error.email && (
-                    <p className={s.error}>{error.email}</p>
-                  )}
-                </div>
-                <div className={s.inputField}>
-                  <input
-                    type="password"
-                    name="password"
-                    value={input.password}
-                    placeholder="Password"
-                    autoCapitalize="off"
-                    onClick={handleClick}
-                    required
-                    onChange={handleInputChange}
-                  />
-                  <i class="uil uil-lock"></i>
-                  {click.password && error.password && (
-                    <p className={s.error}>{error.password}</p>
-                  )}
-                </div>
                 <div className={s.inputField}>
                   <p id={s.dateOfBirth}>Date of Birth</p>
                   <input
@@ -147,46 +101,24 @@ export default function Login() {
                     <p className={s.error}>{error.date_of_birth}</p>
                   )}
                 </div>
-
-                {/* Phone and PIN numbers */}
-                <div className={s.line}></div>
-
-                <div className={s.firstLastNameContainer}>
-                  <div className={`${s.nameContainer} ${s.inputField}`}>
-                    <input
-                      id="name"
-                      type="text"
-                      name="first_name"
-                      value={input.first_name}
-                      onClick={handleClick}
-                      onChange={handleInputChange}
-                      placeholder="First Name"
-                      autoCapitalize="off"
-                      required
-                    />
-                    <i class="uil uil-user"></i>
-                    {click.first_name && error.first_name && (
-                      <p className={s.error}>{error.first_name}</p>
-                    )}
-                  </div>
-                  <div className={s.lastnameContainer}>
-                    <input
-                      id="lastname"
-                      type="text"
-                      name="last_name"
-                      value={input.last_name}
-                      placeholder="Last Name"
-                      onClick={handleClick}
-                      onChange={handleInputChange}
-                      autoCapitalize="off"
-                      required
-                    />
-                    {click.last_name && error.last_name && (
-                      <p className={s.error}>{error.last_name}</p>
-                    )}
-                  </div>
+                <div className={s.inputField}>
+                  <input
+                    type="text"
+                    name="passport"
+                    value={input.passport}
+                    placeholder="Passport Number"
+                    onClick={handleClick}
+                    required
+                    onChange={handleInputChange}
+                  />
+                  <i class="uil uil-mobile-android" />
+                  {click.passport && error.passport && (
+                    <p className={s.error}>{error.passport}</p>
+                  )}
                 </div>
 
+                {/* Phone and PIN numbers */}
+              
                 <div className={s.inputField}>
                   <input
                     type="text"
@@ -222,7 +154,7 @@ export default function Login() {
                   )}
                   </div>
                   <div className={s.lastnameContainer}>
-                  <p id={s.dateOfBirth}>Optional</p>
+                  
                     <input
                       id="lastname"
                       type="text"
@@ -241,7 +173,7 @@ export default function Login() {
                 </div>
 
                 <div className={s.inputField}>
-                <p id={s.dateOfBirth}>Optional</p>
+                
                   <input
                     type="text"
                     name="address"
@@ -262,10 +194,7 @@ export default function Login() {
                 <div className={s.loginButton}>
                 <button onClick={handleSubmit}>Create Account</button>
                 </div>
-                <div className={s.googleBtn}>
-                  <p id={s.googleOr}>Sign in With Google</p>
-                  <LoginGoogle />
-                </div>
+              
               </form>
               <div className={s.loginSignup}>
                 <span className="text">

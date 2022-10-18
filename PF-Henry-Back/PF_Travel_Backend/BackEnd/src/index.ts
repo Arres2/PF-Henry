@@ -2,8 +2,7 @@ import express from 'express'
 import { indexRouter } from './routes';
 const { expressjwt: jwt } = require("express-jwt");
 const jwks = require("jwks-rsa");
-const jwtScope = require("express-jwt-scope");
-const { statusUpdater } = require("./controllers.js");
+// const { statusUpdater } = require("./controllers.js");
 const cookieParser = require("cookie-parser");
 const bodyParser = require("body-parser");
 const morgan = require("morgan");
@@ -30,12 +29,12 @@ app.use(express.json())
 app.use(cors())
 app.use("/", indexRouter);
 
-app.use((req?, res?) => {
-  const status = req.status || 500;
-  const message = req.message || req;
-  console.error(message);
-  res.status(status).send(message);
-});
+// app.use((req?, res?) => {
+//   const status = req.status || 500;
+//   const message = req.message || req;
+//   console.error(message);
+//   res.status(status).send(message);
+// });
 
 
 //------------------------------------------------------------
