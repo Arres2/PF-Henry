@@ -21,7 +21,6 @@ const authMiddleWare = jwt({
 
 
 
-
 packageRouter.get('/', async (req, res) => {
     try {
       res.status(200).json("El Modulo /TouristPackage se encuentra en desarrollo")

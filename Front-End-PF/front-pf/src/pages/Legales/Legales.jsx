@@ -5,7 +5,7 @@ import NavBar from '../../components/NavBar/NavBar'
 export default function Legales() {
   return (
     <div>
-        <NavBar/>
+     
         <div className='m-4'>
 
 
@@ -39,7 +39,7 @@ export default function Legales() {
 
         <p>Travelop se reserva el derecho a resolver cualquier situacion que este fuera del control del servicio, incluido el mal uso de la aplicacion, la informacion incorrecta del usuario, la incorrecta eleccion de los paquetes de viajes, la mala conexion del usuario o alguna falla que de otra indole.</p>
         </div>
-    <Footer/>
+   
     </div>
   )
 }

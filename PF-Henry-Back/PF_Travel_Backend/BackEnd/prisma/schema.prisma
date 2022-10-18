@@ -1,6 +1,3 @@
-// This is your Prisma schema file,
-// learn more about it in the docs: https://pris.ly/d/prisma-schema
-
 generator client {
   provider = "prisma-client-js"
 }
@@ -14,34 +11,33 @@ model familyPackage {
   id        String           @id @default(uuid())
   billingId String           @default(uuid())
   package   String           @default(uuid())
-  cost      Decimal          @db.Money()
-  tPackage  touristPackage[] // relation one-to-many with touristPackage
+  cost      Decimal          @db.Money
+  tPackage  touristPackage[]
 }
 
 model touristPackage {
   id         String                       @id @default(uuid())
-  cost       Decimal                      @db.Money()
-  familyP    familyPackage                @relation(fields: [familyPId], references: [id])
+  customerId String
+  ticketId   String
+  cost       Decimal                      @db.Money
   familyPId  String
   customer   customer                     @relation(fields: [customerId], references: [id])
-  customerId String
+  familyP    familyPackage                @relation(fields: [familyPId], references: [id])
   ticket     ticket                       @relation(fields: [ticketId], references: [id])
-  ticketId   String
-  //accommodation       accommodation   @relation(fields: [accommodationId] , references: [id])
-  //accommodationId     String
   excursions excursionsOnTouristPackage[]
 }
 
 model customer {
-  id             String           @id @default(uuid())
-  name           String
-  identification String
-  birthday       String
-  phoneNumber    String
+  id             String           @id @unique @default(uuid())
+  name           String?
+  picture        String?
+  identification String?
+  birthday       String?
+  phoneNumber    String?
   email          String           @unique
-  numberCard     String           @unique
+  isVerified     Boolean          @default(false)
+  role           Role             @default(USER)
   tPackage       touristPackage[]
-  isAdmin        Boolean
 }
 
 model ticket {
@@ -49,23 +45,20 @@ model ticket {
   fligthId  String?
   class     String
   chair     String
-  cost      Decimal          @db.Money()
-  tPackage  touristPackage[]
-  company   company          @relation(fields: [companyId], references: [id])
+  cost      Decimal          @db.Money
   companyId String
+  company   company          @relation(fields: [companyId], references: [id])
+  tPackage  touristPackage[]
 }
 
 model accommodation {
   id          String  @id @default(uuid())
-  //hotelId         Int?
-  location    String
-  description String  @db.Text
-  class       Int
-  cost        Decimal @db.Money()
-  services    Int
-  //tPackage        touristPackage[]
-  //hotel           hotel             @relation(fields:[hotelId], references: [id])
   hotelId     String
+  location    String
+  description String
+  class       Int
+  cost        Decimal @db.Money
+  services    Int
 }
 
 model excursion {
@@ -75,15 +68,15 @@ model excursion {
   startDate String
   endDate   String
   type      String
-  cost      Decimal                      @db.Money()
+  cost      Decimal                      @db.Money
   tPackages excursionsOnTouristPackage[]
 }
 
 model excursionsOnTouristPackage {
-  excursion   excursion      @relation(fields: [excursionId], references: [id])
   excursionId String
-  tPackage    touristPackage @relation(fields: [tPackageId], references: [id])
   tPackageId  String
+  excursion   excursion      @relation(fields: [excursionId], references: [id])
+  tPackage    touristPackage @relation(fields: [tPackageId], references: [id])
 
   @@id([excursionId, tPackageId])
 }
@@ -101,11 +94,10 @@ model hotel {
   phoneNumber String
   address     String
   cityCountry String
-  email       String //@unique
-  description String //@db.Text
-  image       String //@db.Text
+  description String
+  email       String
+  image       String
   services    Int?
-  //accommodation   accommodation[]
 }
 
 model services {
@@ -116,11 +108,17 @@ model services {
 model service {
   id       Int     @id @default(autoincrement())
   services Int
-  cost     Decimal @db.Money()
+  cost     Decimal @db.Money
 }
 
 model type {
   id     Int    @id @default(autoincrement())
   name   String
-  detail String @db.Text
+  detail String
+}
+
+enum Role {
+  USER
+  ADMIN
+  SUPERADMIN
 }

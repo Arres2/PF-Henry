@@ -7,10 +7,8 @@ import SideBar from "../../components/SideBar/SideBar";
 export default function PageUser() {
   return (
     <div className="container-all-user">
-      <NavBar />
       <SideBar />
       <CardUser />
-      <Footer />
     </div>
   );
 }
