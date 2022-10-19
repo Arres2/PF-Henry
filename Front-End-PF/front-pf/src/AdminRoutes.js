@@ -2,11 +2,11 @@ import React, { useEffect } from "react";
 import { Outlet } from "react-router-dom";
 import { useAuth0 } from "@auth0/auth0-react";
 import { useDispatch, useSelector } from "react-redux";
-import { setUserInfo } from "./redux/actions";
+import { setUser } from "./redux/actions";
 import ClipLoader from "react-spinners/ClipLoader";
 
 function AdminRoutes() {
-  const dbUser = useSelector((state) => state.user);
+  const currentUser = useSelector((state) => state.currentUser);
 
   const {
     isAuthenticated,
@@ -18,10 +18,10 @@ function AdminRoutes() {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(setUserInfo(getAccessTokenSilently, user?.email));
+    dispatch(setUser(getAccessTokenSilently, user?.email));
   }, [dispatch, user]);
 
-  return isAuthenticated && dbUser.data?.admin ? (
+  return isAuthenticated && currentUser?.role !== "USER" ? (
     <Outlet />
   ) : isLoading ? (
     <div

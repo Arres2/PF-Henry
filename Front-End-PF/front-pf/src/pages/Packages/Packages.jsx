@@ -39,7 +39,7 @@ export default function Packages() {
 
     return (
         <>
-     
+
 
         <div className="container">
         <div className={s.ibox_title}>
@@ -146,7 +146,7 @@ export default function Packages() {
         <div className="ibox-content">
             <button className="btn btn-white"><i className="fa fa-arrow-left"></i> Continue shopping</button>
         </div>
-      
+       
         </>
     )
 
