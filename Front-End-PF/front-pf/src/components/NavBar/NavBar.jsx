@@ -4,8 +4,9 @@ import style from './NavBar.module.css';
 import {useAuth0} from "@auth0/auth0-react"
 import { Outlet } from "react-router-dom";
 import Footer from "../Footer/Footer";
+import CarritoIcon from "../CarritoIcon/CarritoIcon"
 
-export default function NavBar() {
+export default function NavBar() {  
   const{isAuthenticated,loginWithRedirect,user, logout}=useAuth0()
 
   return (
@@ -29,7 +30,9 @@ export default function NavBar() {
         </div>
         {isAuthenticated? console.log(user):null}
       <div className='my-3.5 mx-2.5'>
-      
+      <Link to="/payment">
+        <CarritoIcon/>
+      </Link>
         {isAuthenticated? <button className='mx-2 text-zinc-100 hover:text-4-color transition ease-in duration-200 text-xl p-1 font-semibold' onClick={logout}>Logout</button>:<button className='mx-2 text-zinc-100 hover:text-4-color transition ease-in duration-200 text-xl p-1 font-semibold' onClick={loginWithRedirect}>Login</button>}
     
         <Link to="/register">

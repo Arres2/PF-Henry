@@ -1,0 +1,18 @@
+.searchExc {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  box-shadow: 2.5px 2.5px 2px 1px rgba(0, 0, 0, 0.358);
+  border-radius: 20px;
+  margin: 50px;
+  height: 300px;
+  background-color: rgba(211, 206, 206, 0.138);
+}
+.container-search-exc {
+  display: flex;
+  justify-content: center;
+  background-image: url("https://img.freepik.com/vector-premium/ruta-ruta-linea-avion-punto-inicio-trazo-linea-trazos_166001-133.jpg?w=2000");
+  background-size: cover;
+}

@@ -1,0 +1,152 @@
+.container-all {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+.carousel-indicators {
+  height: 0;
+  width: 0;
+}
+
+.carousel-inner {
+  width: 70%;
+}
+
+.container-card-misiones {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px;
+  justify-content: space-between;
+  height: 350px;
+  width: 100%;
+  max-width: 250px;
+  border-radius: 20px; /* 
+  width: 100%;
+  max-width: 700px; */
+  background-image: url("https://media.traveler.es/photos/613768f03decec3303bab7da/16:9/w_1856,h_1044,c_limit/158835.jpg");
+  color: white;
+}
+
+.container-card-lagos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px;
+  justify-content: space-between;
+  height: 350px;
+  width: 100%;
+  max-width: 250px;
+  border-radius: 20px; /* 
+  width: 100%;
+  max-width: 700px; */
+  background-image: url("https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/06/ee/cb/c7.jpg");
+  color: white;
+}
+
+.container-card-bariloche {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px;
+  justify-content: space-between;
+  height: 350px;
+  width: 100%;
+  max-width: 250px;
+  border-radius: 20px; /* 
+  width: 100%;
+  max-width: 700px; */
+  background-image: url("https://i0.wp.com/barilocheparabrasileiros.com.br/wp-content/uploads/2020/08/Guia-de-Inverno.jpeg?resize=730%2C730&ssl=1");
+  color: white;
+}
+.container-card-langostura {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px;
+  justify-content: space-between;
+  height: 350px;
+  width: 100%;
+  max-width: 250px;
+  border-radius: 20px; /* 
+  width: 100%;
+  max-width: 700px; */
+  background-image: url("https://www.cronista.com/files/image/412/412558/61a7a97f9219c_360_480!.jpg?s=10ce3e5e5e568c55f8dcd9af234749ba&d=1638806336");
+  color: white;
+}
+.container-card-brasil {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px;
+  justify-content: space-between;
+  height: 350px;
+  width: 100%;
+  max-width: 250px;
+  border-radius: 20px; /* 
+  width: 100%;
+  max-width: 700px; */
+  background-image: url("https://www.caracteristicas.co/wp-content/uploads/2017/04/brasil-1-e1566159470787.jpg");
+  color: white;
+}
+.container-card-paraguay {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px;
+  justify-content: space-between;
+  height: 350px;
+  width: 100%;
+  max-width: 250px;
+  border-radius: 20px; /* 
+  width: 100%;
+  max-width: 700px; */
+  background-image: url("https://www.caracteristicas.co/wp-content/uploads/2018/08/paraguay-1-e1578163221655-800x416.jpg");
+  color: white;
+}
+.container-card-jujuy {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px;
+  justify-content: space-between;
+  height: 350px;
+  width: 100%;
+  max-width: 250px;
+  border-radius: 20px; /* 
+  width: 100%;
+  max-width: 700px; */
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Cerro_de_los_siete_colores.JPG/800px-Cerro_de_los_siete_colores.JPG");
+  color: white;
+}
+.container-card-tucuman {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px;
+  justify-content: space-between;
+  height: 350px;
+  width: 100%;
+  max-width: 250px;
+  border-radius: 20px; /* 
+  width: 100%;
+  max-width: 700px; */
+  background-image: url("https://www.serargentino.com/public/images/2021/05/16222246410-tucuman-773x458.jpg");
+  color: white;
+}
+.container-card-salta {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px;
+  justify-content: space-between;
+  height: 350px;
+  width: 100%;
+  max-width: 250px;
+  border-radius: 20px; /* 
+  width: 100%;
+  max-width: 700px; */
+  background-image: url("https://a.travel-assets.com/findyours-php/viewfinder/images/res40/80000/80287-Salta.jpg");
+  color: white;
+}

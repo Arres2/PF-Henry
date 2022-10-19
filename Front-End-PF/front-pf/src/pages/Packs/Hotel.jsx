@@ -1,5 +1,4 @@
-import NavBar from "../../components/NavBar/NavBar";
-import Footer from "../../components/Footer/Footer";
+
 import "./Hotel.css";
 import CardPack from "../../components/CardHotel/CardHotel";
 import Container from "react-bootstrap/Container";
